@@ -96,4 +96,11 @@ containers:
     - mountPath: /home/project
       name: volume-theia
   
-configMap: {} 
+configMap:
+  enabled: true
+  name: script
+  data: 
+    listar.sh: |-
+      #!/bin/bash
+      ls -ltra
+      echo "acabei de listar!"

@@ -1,0 +1,8 @@
+{{- if .Values.configMap }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Values.configMap.name }}
+data:
+  listar.sh: {{ .Values.configMap.data }}
+{{- end }}
